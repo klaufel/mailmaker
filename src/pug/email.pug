@@ -1,0 +1,66 @@
+extends partials/_layout
+
+block vars
+  - var config_title = 'Contact'
+
+block content
+
+  tr
+   td(class="c-wrapper__heading")
+      span Hi {name}!
+
+  tr
+    td(class="c-wrapper__description u-global")
+      span
+        | Lorem ipsum dolor sit amet.
+
+  tr
+    td(class="c-wrapper__table u-global")
+
+
+      table(class="c-table" cellpadding="0" cellspacing="0" border="0" width="100%")
+        tr
+          td(class="c-table__item c-table__item--white" align="left")
+            table(class="u-table-resp" align="left" cellpadding="0" cellspacing="0" border="0" width="48%")
+              tr
+                td(class="c-table__field c-table__field--title")
+                  span Name:
+            table(class="u-table-resp" align="left" cellpadding="0" cellspacing="0" border="0" width="48%")
+              tr
+                td(class="c-table__field c-table__field--value")
+                  span {name}
+        tr
+          td(class="c-table__item c-table__item--gray" align="left")
+            table(class="u-table-resp" align="left" cellpadding="0" cellspacing="0" border="0" width="48%")
+              tr
+                td(class="c-table__field c-table__field--title")
+                  span Email:
+            table(class="u-table-resp" align="left" cellpadding="0" cellspacing="0" border="0" width="48%")
+              tr
+                td(class="c-table__field c-table__field--value")
+                  a(class="c-table__link" href="mailto:{email}") {email}
+        tr
+          td(class="c-table__item c-table__item--white" align="left")
+            table(class="u-table-resp" align="left" cellpadding="0" cellspacing="0" border="0" width="48%")
+              tr
+                td(class="c-table__field c-table__field--title")
+                  span Phone:
+            table(class="u-table-resp" align="left" cellpadding="0" cellspacing="0" border="0" width="48%")
+              tr
+                td(class="c-table__field c-table__field--value")
+                  a(class="c-table__link" href="tel:{phone}") {phone}
+        tr
+          td(class="c-table__item c-table__item--gray" align="left")
+            table(class="u-table-resp" align="left" cellpadding="0" cellspacing="0" border="0" width="48%")
+              tr
+                td(class="c-table__field c-table__field--title")
+                  span Message:
+            table(class="u-table-resp" align="left" cellpadding="0" cellspacing="0" border="0" width="48%")
+              tr
+                td(class="c-table__field c-table__field--value")
+                  span {message}
+
+  tr
+    td(class="c-wrapper__description u-global")
+      span
+        | Best regards!

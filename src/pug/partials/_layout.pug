@@ -1,0 +1,78 @@
+//- partials/_layout.pug
+doctype transitional
+html(xmlns="http://www.w3.org/1999/xhtml" lang="es")
+
+  block vars
+ 
+  - var config_path = ""
+  - var config_date = 2018
+  - var config_name = "{name}"
+  - var config_url = "{url}"
+  
+
+  head
+
+    meta(http-equiv="Content-Type" content="text/html; charset=UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")  	
+
+    title #{config_title} - #{config_name}
+
+    link(rel="stylesheet" type="text/css" href="assets/css/style.css")
+
+    style(type="text/css")
+      include _responsive.css
+  
+  body
+    
+    table(class="c-header" cellpadding="0" cellspacing="0" border="0" width="100%")
+      tr
+        td(class="c-header__container" align="center")
+          table(class="u-w100--xs" cellpadding="0" cellspacing="0" border="0" width="580")
+            tr
+              td
+                table(cellpadding="0" cellspacing="0" border="0" align="center" width="100%")
+                  tr
+                    td(class="c-header__col" align="left")
+                      a(class="c-header__logo" href=""+config_url+"" target="_blank")
+                        img(class="c-header__image" src=""+config_path+"assets/images/logo.png" width="270" height="77" alt=""+config_name+"")
+                    // /.c-header__col 
+
+                    td(class="c-header__title" align="right")
+                      span #{config_title}
+                    // /.c-header__title
+
+        // /.c-header__container 
+    // /.c-header 
+
+
+    table(class="o-main" cellpadding="0" cellspacing="0" border="0" width="100%")
+      tr        
+        td(class="o-container__main" align="center" width="100%" class="u-w100--xs")
+                
+          table(cellpadding="0" cellspacing="0" border="0" width="580" class="c-wrapper u-w100--xs")
+            tr
+              td(class="c-wrapper__container" align="center")
+                table(cellpadding="0" cellspacing="0" border="0" width="100%")
+
+                  block content
+
+                // /.c-wrapper__container 
+          // /.c-wrapper
+
+        // /.o-container__main 
+    // /.o-main 
+
+    table(cellpadding="0" cellspacing="0" border="0" width="100%" class="c-footer")
+      tr
+        td(align="center" class="c-footer__container")
+          table(cellpadding="0" cellspacing="0" border="0" align="center" width="580" class="u-w100--xs")
+            tr
+              td(class="c-footer__legal u-font")
+
+                table(cellpadding="0" cellspacing="0" border="0" width="100%")
+                  tr
+                    td(class="c-footer__legal-title" align="center")
+                      span © #{config_date} #{config_title}. All right reserved.
+              // /.c-footer__legal 
+        // /.c-footer__container 
+    // /.c-footer 

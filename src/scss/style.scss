@@ -1,0 +1,326 @@
+//
+// Styles for SASS Project / Main file to compile
+// --------------------------------------------------
+
+//== 01. Settings
+// --------------------------------------------------
+
+
+
+//## Color brand variables
+  $color-brand-01:    #f7a600;
+  $color-brand-02:    #f18006;
+  $color-brand-03:    #ec590c;
+  $color-brand-04:    #e63312;
+  $color-brand-05:    #ee7523;
+
+  $color-gray-01:     #727272;
+  $color-gray-02:     #a09f9f;
+  $color-gray-03:     #c2c2c2;
+  $color-gray-04:     #f0f0f0;
+  $color-gray-05:     #f9f8f8;
+  $color-gray-06:     #fafafa; // Newsletter background variant
+
+  $color-dark:        #000000;
+  $color-light:       #ffffff;
+
+  $color-cat-01:      #ee7523; // Tratamientos
+  $color-cat-02:      #afcc44; // Bienestar
+  $color-cat-03:      #3fc0f0; // Salud
+  $color-cat-04:      #9d6cac; // Escapadas
+  $color-cat-05:      #36b4a4; // Deportes
+
+
+//## Breackpoints
+  $s-breakpoint-md: 535px;
+
+  $s-breakpoints : (
+    'md' : $s-breakpoint-md
+  );
+
+
+//## General variables
+  $global-body-background: #ffffff !default;
+  $global-font-family: Arial, sans-serif !default;
+
+  $global-color-container: $color-light !default;
+  $global-color-main: $color-brand-01 !default;
+
+  $global-color: $color-gray-02 !default;
+  $global-footer-font-color: $color-gray-02 !default;
+
+
+//## Components variables
+  $c-button__background:    $global-color-main !default;
+  $c-button__color:     #ffffff !default;
+  $c-button__font-weight:   bold !default;
+  $c-button__border-radius: 30px !default;
+  $c-button__padding-x:   40px;
+  $c-button__padding-y:   14px;
+
+//## Utility variables
+  $u-pad-size-lg: 70px;
+  $u-pad-size-md: 36px;
+  $u-pad-size-sm: 16px;
+
+  $u-pad-sizes: (
+    'lg': $u-pad-size-lg,
+    'md': $u-pad-size-md,
+    'sm': $u-pad-size-sm
+  );
+
+
+//== 02. Generic
+// --------------------------------------------------
+
+//## Generic style
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $global-font-family;
+  background: $global-body-background;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  mso-line-height-rule: exactly;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  border: 0;
+}
+
+
+
+//== 03. Elements
+// --------------------------------------------------
+
+//## The silence is golden
+
+
+
+//== 04. Tools
+// --------------------------------------------------
+
+//## Mixins
+  @mixin font-size($font-size, $line-height: auto) {
+    font-size: $font-size;
+    @if $line-height == auto {
+      line-height: ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
+    }
+    @else {
+      @if (type-of($line-height) == number or $line-height == inherit or $line-height == normal) {
+        line-height: $line-height;
+      }
+      @elseif ($line-height != none and $line-height != false) {
+        @warn "D’oh! ‘#{$line-height}’ is not a valid value for `line-height`.";
+      }
+    }
+  }
+
+  @mixin border-radius($border-radius: 0) {
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+  }
+
+  @mixin table-resp($breakpoint : map-get($s-breakpoints,'md')){
+    box-sizing: border-box;
+    @media (max-width:$breakpoint){
+      & { width: 100%!important; padding-top: 0!important; padding-bottom: 16px!important; padding-left: 0!important; padding-right: 0 !important; }
+    }
+  }
+
+  @mixin cat-color-variables($property: 'color'){
+    @each $name,$color in $colors-cat {
+      &--#{$name}{
+        #{$property}: $color;
+      }
+    }
+  }
+
+//== 05. Objects
+// --------------------------------------------------
+
+//## Header
+
+  $c-header__background:        #ffffff !default;
+
+
+
+  .c-header {
+    //background-color: $global-color-main;
+  }
+
+  .c-header__container {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: $c-header__background;
+  }
+
+  .c-header__logo {
+    text-decoration: none;
+    border: 0;
+  }
+
+  .c-header__image {
+    @include font-size(14px, 16px);
+    color: $color-light;
+    font-weight: bold;
+  }
+
+  .c-header__col {
+    background: $c-header__background;
+  }
+
+  .c-header__title {
+    background: $c-header__background;
+    @include font-size(18px, 18px);
+    color: #b2b2b2;
+    font-weight: bold;
+    padding-top: 8px;
+  }
+
+
+
+
+//## Footer
+
+
+  $c-footer__background:      #ffffff !default;
+  $c-footer__color:           #000000 !default;
+
+
+  .c-footer {
+    //background: $global-body-background;
+  }
+
+  .c-footer__container {
+    padding-top: 35px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: $c-footer__background;
+  }
+
+  .c-footer__detail {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+
+// Wrapper
+
+
+
+  $c-wrapper__background:       #f2f2f2 !default;
+  .c-wrapper {
+  }
+
+  .o-container__main {
+  background: $c-wrapper__background;
+}
+
+  .c-wrapper__container {
+    padding-top: 45px;
+    padding-bottom: 50px;
+    padding-right: 20px;    
+    padding-left: 20px;
+    background: $c-wrapper__background;
+    text-align: left;
+  }
+
+  .c-wrapper__heading {
+    text-align: left;
+    padding-bottom: 20px;
+    font-family: $global-font-family;
+    @include font-size(18px, 20px);
+    color: #000000;
+    font-weight: bold;
+  }
+
+  .c-wrapper__description {
+    padding-bottom: 20px;
+  }
+
+  .c-wrapper__table {
+    padding-top: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 55px;
+  }
+
+  .c-wrapper__button {
+    text-align: center;
+    padding-top: 30px;
+  }
+
+
+
+//== 06. Components
+// --------------------------------------------------
+
+//## Buttons
+
+.c-button {
+  background: $c-button__background;
+  color: $c-button__color;
+  padding: $c-button__padding-y $c-button__padding-x;
+  font-weight: $c-button__font-weight;
+  text-decoration: none;
+  font-family: $global-font-family;
+  @include border-radius($c-button__border-radius);
+  display: inline-block;
+  @include font-size(18px, 28px);
+}
+
+
+//== 07. Utilities
+// --------------------------------------------------
+
+//##  Utilities and generic classes
+.u-global {
+  font-family: $global-font-family;
+  color: $global-color;
+  @include font-size(15px, 22px);
+}
+
+.u-img-max {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.u-font {
+  font-family: $global-font-family;
+}
+
+.u-bold {
+  font-weight: bold;
+}
+
+.u-center {
+  text-align: center;
+}
+
+.u-white {
+  background: #ffffff;
+}
+
+.u-w100 {
+  width: 100%;
+}
+
+.u-no-margin {
+  margin: 0;
+}
+.u-margin {
+  margin: 0 auto 15px;
+}
+

@@ -1,0 +1,107 @@
+/* Client-specific styles */
+
+/* Force Outlook to provide a "view in browser" message */
+#outlook a {
+  padding: 0;
+}
+
+/* Force Hotmail to display emails at full width */
+.ReadMsgBody {
+  width: 100%;
+}
+
+.ExternalClass {
+  width: 100%;
+}
+
+/* Force Hotmail to display normal line spacing */
+.ExternalClass,
+.ExternalClass p,
+.ExternalClass span,
+.ExternalClass font,
+.ExternalClass td,
+.ExternalClass div {
+  line-height: 100%;
+}
+
+.appleBody a,
+.appleFooter a {
+  color: #a09f9f !important;
+  text-decoration: none;
+}
+
+
+/* Reset styles */
+body {
+  width: 100% !important;
+  height:100% !important;
+  margin: 0;
+  padding: 0;
+}
+
+/* Prevent WebKit and Windows mobile changing default text sizes */
+body,
+table,
+td,
+a {
+  -webkit-text-size-adjust:100%;
+  -ms-text-size-adjust:100%;
+}
+
+/* Remove spacing between tables in Outlook 2007 and up */
+table,
+td {
+  border-collapse: collapse;
+  mso-table-lspace: 0pt;
+  mso-table-rspace: 0pt;
+}
+
+/* squash Exact Target injected paragraphs */
+p {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  line-height: 0;
+}
+
+/* Allow smoother rendering of resized image in Internet Explorer */
+img {
+  display: block;
+  outline: none;
+  text-decoration: none;  
+  border:0; height: auto;
+  line-height:100%;
+  outline:none;
+  -ms-interpolation-mode: bicubic;
+}
+
+a {
+  outline: none;
+}
+
+a img {
+  border: none;
+}
+
+
+/* Media Queries */
+@media screen and (max-width: 525px) {
+  /* Objects */
+  .c-header__container { padding-top: 15px!important; padding-bottom: 18px!important; }
+  .c-header__image { width: auto !important; max-width: 180px !important; height: auto !important; }
+  .c-header__title { font-size: 14px !important; line-height: 14px !important; }
+  .c-wrapper__container { padding-top: 20px !important; padding-left: 20px !important; padding-right: 20px !important; padding-bottom: 30px !important; }
+  .c-wrapper__container--challenges { padding-top: 32px !important; padding-right: 16px !important; padding-left: 16px !important; padding-bottom: 16px !important; }
+  .c-wrapper__container--global, .c-wrapper__container--special, .c-wrapper__container--category  { padding-top: 15px !important; padding-right: 16px !important; padding-left: 16px !important; padding-bottom: 0px !important; }
+  .c-wrapper__heading { padding-bottom: 15px !important; font-size: 20px !important; line-height: 30px !important; }
+  .c-wrapper__button { padding-top: 15px !important; }
+  .c-wrapper__heading { font-size: 16px !important; line-height: 26px !important; }
+  /* Components */
+  .c-button { font-size: 14px !important; line-height: 24px !important; }
+  .c-wrapper__table { padding-left: 0 !important; padding-right: 0 !important; }
+  /* Utilities */
+  .u-global { font-size: 14px !important; line-height: 24px !important; }
+  .u-w100--xs { width: 100% !important; }
+  .u-table-resp { box-sizing: border-box; width: 100%!important; padding-top: 0!important; padding-bottom: 16px!important; padding-left: 0!important; padding-right: 0 !important; }
+  .u-table-resp__col { padding-right: 0 !important; padding-left: 0 !important; }
+}

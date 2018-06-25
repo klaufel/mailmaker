@@ -1,0 +1,39 @@
+{
+  "name": "mailmaker",
+  "version": "1.0.0",
+  "description": "A toolset for create your awesome emails",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/klaufel/mailmaker.git"
+  },
+  "keywords": [
+    "email",
+    "html",
+    "tool",
+    "mail",
+    "generator",
+    "mail",
+    "maker",
+    "mailmaker"
+  ],
+  "author": "Juan Carlos Ruiz <klaufel@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/klaufel/mailmaker/issues"
+  },
+  "homepage": "https://github.com/klaufel/mailmaker#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean-css": "^3.0.3",
+    "gulp-inline-css": "^3.1.0",
+    "gulp-notify": "^3.0.0",
+    "gulp-pug2": "0.0.2",
+    "gulp-sass": "3.2.1",
+    "gulp-zip": "^4.1.0"
+  }
+}
