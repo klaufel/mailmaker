@@ -17,7 +17,7 @@ var paths = {
     views      : ['dist/*.html'],
     css        : 'dist/assets/css',
     pug        : ['src/pug/*.pug'],
-    pugWatch   : ['src/pug/**/*.pug'],
+    pugWatch   : ['src/pug/**/*'],
     mainsass   : ['src/style.scss'],
     sass       : ['src/scss/**/*.scss'],
 };

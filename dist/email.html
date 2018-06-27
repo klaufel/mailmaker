@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -93,21 +93,8 @@ a img {
 
 /* Media Queries */
 @media screen and (max-width: 525px) {
-  /* Objects */
-  .c-header__container { padding-top: 15px!important; padding-bottom: 18px!important; }
-  .c-header__image { width: auto !important; max-width: 180px !important; height: auto !important; }
-  .c-header__title { font-size: 14px !important; line-height: 14px !important; }
-  .c-wrapper__container { padding-top: 20px !important; padding-left: 20px !important; padding-right: 20px !important; padding-bottom: 30px !important; }
-  .c-wrapper__container--challenges { padding-top: 32px !important; padding-right: 16px !important; padding-left: 16px !important; padding-bottom: 16px !important; }
-  .c-wrapper__container--global, .c-wrapper__container--special, .c-wrapper__container--category  { padding-top: 15px !important; padding-right: 16px !important; padding-left: 16px !important; padding-bottom: 0px !important; }
-  .c-wrapper__heading { padding-bottom: 15px !important; font-size: 20px !important; line-height: 30px !important; }
-  .c-wrapper__button { padding-top: 15px !important; }
-  .c-wrapper__heading { font-size: 16px !important; line-height: 26px !important; }
-  /* Components */
-  .c-button { font-size: 14px !important; line-height: 24px !important; }
-  .c-wrapper__table { padding-left: 0 !important; padding-right: 0 !important; }
   /* Utilities */
-  .u-global { font-size: 14px !important; line-height: 24px !important; }
+  
   .u-w100--xs { width: 100% !important; }
   .u-table-resp { box-sizing: border-box; width: 100%!important; padding-top: 0!important; padding-bottom: 16px!important; padding-left: 0!important; padding-right: 0 !important; }
   .u-table-resp__col { padding-right: 0 !important; padding-left: 0 !important; }
@@ -118,103 +105,41 @@ a img {
   <body>
     <table class="c-header" cellpadding="0" cellspacing="0" border="0" width="100%">
       <tr>
-        <td class="c-header__container" align="center">
+        <td class="c-header__container o-container" align="center">
           <table class="u-w100--xs" cellpadding="0" cellspacing="0" border="0" width="580">
             <tr>
               <td>
                 <table cellpadding="0" cellspacing="0" border="0" align="center" width="100%">
                   <tr>
-                    <td class="c-header__col" align="left"><a class="c-header__logo" href="{url}" target="_blank"><img class="c-header__image" src="assets/images/logo.png" width="270" height="77" alt="{name}"/></a></td>
-                    <!-- /.c-header__col -->
-                    <td class="c-header__title" align="right"><span>Contact</span></td>
+                    <td class="c-header__logo" align="center"><a class="c-header__logo__link u-global" href="{url}" target="_blank"><img class="c-header__logo__image" src="assets/images/header-logo.png" width="120" height="50" alt="MailMaker"/></a></td>
+                    <!-- /.c-header__logo -->
+                  </tr>
+                  <tr>
+                    <td class="c-header__title" align="center"><span>Mail Maker</span></td>
                     <!-- /.c-header__title-->
+                  </tr>
+                  <tr>
+                    <td class="c-header__subtitle" align="center"><span>A toolset for create your awesome emails.</span></td>
+                    <!-- /.c-header__subtitle-->
                   </tr>
                 </table>
               </td>
             </tr>
           </table>
         </td>
-        <!-- /.c-header__container -->
+        <!-- /.c-header__container-->
       </tr>
     </table>
-    <!-- /.c-header -->
+    <!-- /.c-header-->
     <table class="o-main" cellpadding="0" cellspacing="0" border="0" width="100%">
-      <tr>       
+      <tr>
         <td class="o-container__main u-w100--xs" align="center" width="100%">
           <table class="c-wrapper u-w100--xs" cellpadding="0" cellspacing="0" border="0" width="580">
             <tr>
               <td class="c-wrapper__container" align="center">
                 <table cellpadding="0" cellspacing="0" border="0" width="100%">
                   <tr>
-                    <td class="c-wrapper__heading"><span>Hi {name}!</span></td>
-                  </tr>
-                  <tr>
-                    <td class="c-wrapper__description u-global"><span>Lorem ipsum dolor sit amet.</span></td>
-                  </tr>
-                  <tr>
-                    <td class="c-wrapper__table u-global">
-                      <table class="c-table" cellpadding="0" cellspacing="0" border="0" width="100%">
-                        <tr>
-                          <td class="c-table__item c-table__item--white" align="left">
-                            <table class="u-table-resp" align="left" cellpadding="0" cellspacing="0" border="0" width="48%">
-                              <tr>
-                                <td class="c-table__field c-table__field--title"><span>Name:</span></td>
-                              </tr>
-                            </table>
-                            <table class="u-table-resp" align="left" cellpadding="0" cellspacing="0" border="0" width="48%">
-                              <tr>
-                                <td class="c-table__field c-table__field--value"><span>{name}</span></td>
-                              </tr>
-                            </table>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="c-table__item c-table__item--gray" align="left">
-                            <table class="u-table-resp" align="left" cellpadding="0" cellspacing="0" border="0" width="48%">
-                              <tr>
-                                <td class="c-table__field c-table__field--title"><span>Email:</span></td>
-                              </tr>
-                            </table>
-                            <table class="u-table-resp" align="left" cellpadding="0" cellspacing="0" border="0" width="48%">
-                              <tr>
-                                <td class="c-table__field c-table__field--value"><a class="c-table__link" href="mailto:{email}">{email}</a></td>
-                              </tr>
-                            </table>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="c-table__item c-table__item--white" align="left">
-                            <table class="u-table-resp" align="left" cellpadding="0" cellspacing="0" border="0" width="48%">
-                              <tr>
-                                <td class="c-table__field c-table__field--title"><span>Phone:</span></td>
-                              </tr>
-                            </table>
-                            <table class="u-table-resp" align="left" cellpadding="0" cellspacing="0" border="0" width="48%">
-                              <tr>
-                                <td class="c-table__field c-table__field--value"><a class="c-table__link" href="tel:{phone}">{phone}</a></td>
-                              </tr>
-                            </table>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="c-table__item c-table__item--gray" align="left">
-                            <table class="u-table-resp" align="left" cellpadding="0" cellspacing="0" border="0" width="48%">
-                              <tr>
-                                <td class="c-table__field c-table__field--title"><span>Message:</span></td>
-                              </tr>
-                            </table>
-                            <table class="u-table-resp" align="left" cellpadding="0" cellspacing="0" border="0" width="48%">
-                              <tr>
-                                <td class="c-table__field c-table__field--value"><span>{message}</span></td>
-                              </tr>
-                            </table>
-                          </td>
-                        </tr>
-                      </table>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="c-wrapper__description u-global"><span>Best regards!</span></td>
+                    <td class="c-wrapper__description u-global"><span>Minions ipsum chasy poulet tikka masala chasy. Wiiiii poopayee potatoooo me want bananaaa! Chasy bappleees poulet tikka masala underweaaar para tú bappleees. Poopayee tatata bala tu wiiiii la bodaaa. Poopayee pepete ti aamoo! Jeje belloo! Pepete underweaaar jeje me want bananaaa! Chasy aaaaaah. Bappleees jeje la bodaaa baboiii gelatooo potatoooo belloo! Wiiiii. Tulaliloo ti aamoo! Chasy hana dul sae bappleees baboiii tatata bala tu para tú. Hahaha me want bananaaa! Chasy ti aamoo! Aaaaaah pepete poopayee belloo! Po kass underweaaar. Underweaaar baboiii baboiii po kass potatoooo gelatooo me want bananaaa!</span></td>
                   </tr>
                 </table>
                 <!-- /.c-wrapper__container -->
@@ -235,7 +160,7 @@ a img {
               <td class="c-footer__legal u-font">
                 <table cellpadding="0" cellspacing="0" border="0" width="100%">
                   <tr>
-                    <td class="c-footer__legal-title" align="center"><span>© 2018 Contact. All right reserved.</span></td>
+                    <td class="c-footer__legal-title u-global" align="center"><span>Made with ♥ from MailMaker</span></td>
                   </tr>
                 </table>
               </td>

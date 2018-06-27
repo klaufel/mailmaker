@@ -1,0 +1,27 @@
+/* ============================================================
+ * Settings: Breakpoints
+ * ============================================================
+ *
+ * Global variables which affect the elements of the project
+ *
+ */
+
+
+// ============================================================
+// Breakpoints variables
+
+$s-breakpoint--xs:      600px !default;	     // Extra small
+$s-breakpoint--sm:      768px !default;      // Small
+$s-breakpoint--md:      992px !default;      // Medium
+$s-breakpoint--lg:      1299px !default;     // Large
+$s-breakpoint--xl:      1400px !default;     // Extra large
+
+
+$s-breakpoints: (
+  'xs': $s-breakpoint--xs,
+  'sm': $s-breakpoint--sm,
+  'md': $s-breakpoint--md,
+  'lg': $s-breakpoint--lg,
+  'xl': $s-breakpoint--xl
+) !default;
+

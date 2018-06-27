@@ -1,0 +1,27 @@
+/* ============================================================
+ * Settings: Config
+ * ============================================================
+ *
+ * In this document all the configuration variables referring
+ * to the project are declared.
+ *
+ */
+
+
+// ============================================================
+// PATHS - Define assets paths here
+
+$s-config__path--img:               "../images" !default;
+$s-config__path--fonts:             "../fonts" !default;
+
+
+// ============================================================
+// BREAKPOINT SEPARATOR - Define the breakpoint separator
+
+$s-config__breakpoint-separator:   "\@" !default;
+
+
+// ============================================================
+// GUTTER - Define global gutter width
+
+$s-config--gutter:      10px !default;

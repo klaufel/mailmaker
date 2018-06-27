@@ -1,0 +1,56 @@
+/* ============================================================
+ * Components: Header
+ * ============================================================
+ *
+ * Minions ipsum baboiii hana dul sae butt. Uuuhhh jeje
+ * tulaliloo daa pepete jiji poulet tikka masala ti aamoo!
+ *
+ */
+
+
+// ============================================================
+// Variables
+
+$c-header__padding-top:               40px !default;
+$c-header__padding-bottom:            55px !default;
+$c-header__color:                     $s-color--dark !default;
+$c-header__font-size:                 14px !default;
+$c-header__line-height:               16px !default;
+$c-header__font-weight:               700 !default;
+
+$c-header__background:                #fe595f !default;
+
+// ============================================================
+// Output CSS
+
+.c-header {
+  background: $c-header__background;
+}
+
+  .c-header__container {
+    padding-top: $c-header__padding-top;
+    padding-bottom: $c-header__padding-bottom;
+  }
+
+  .c-header__logo {
+    padding-bottom: 80px;
+  }
+
+    .c-header__logo__image {
+      text-decoration: none;
+      border: 0;
+    }
+
+
+  .c-header__title {
+    @include t-font-size(40px, 1);
+    color: $s-color--light;
+    font-weight: bold;
+    padding-bottom: 20px;
+  }
+
+  .c-header__subtitle {
+    @include t-font-size(20px, 1);
+    color: $s-color--light;
+    font-weight: bold;
+  }

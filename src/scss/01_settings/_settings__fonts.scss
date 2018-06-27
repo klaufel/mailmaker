@@ -1,0 +1,22 @@
+/* ============================================================
+ * Settings: Fonts
+ * ============================================================
+ *
+ * Fonts utilized by the project brand
+ *
+ */
+
+
+// ============================================================
+// Variables
+
+$s-fonts__font-family:            Arial, sans-serif !default;
+
+$s-fonts__font-size:              18px !default;
+$s-fonts__line-height:            30px !default;
+
+$s-fonts: (
+  'font-family':        $s-fonts__font-family,
+  'font-size':          $s-fonts__font-size,
+  'line-height':        $s-fonts__line-height
+) !default;

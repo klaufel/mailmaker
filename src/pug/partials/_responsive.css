@@ -86,21 +86,8 @@ a img {
 
 /* Media Queries */
 @media screen and (max-width: 525px) {
-  /* Objects */
-  .c-header__container { padding-top: 15px!important; padding-bottom: 18px!important; }
-  .c-header__image { width: auto !important; max-width: 180px !important; height: auto !important; }
-  .c-header__title { font-size: 14px !important; line-height: 14px !important; }
-  .c-wrapper__container { padding-top: 20px !important; padding-left: 20px !important; padding-right: 20px !important; padding-bottom: 30px !important; }
-  .c-wrapper__container--challenges { padding-top: 32px !important; padding-right: 16px !important; padding-left: 16px !important; padding-bottom: 16px !important; }
-  .c-wrapper__container--global, .c-wrapper__container--special, .c-wrapper__container--category  { padding-top: 15px !important; padding-right: 16px !important; padding-left: 16px !important; padding-bottom: 0px !important; }
-  .c-wrapper__heading { padding-bottom: 15px !important; font-size: 20px !important; line-height: 30px !important; }
-  .c-wrapper__button { padding-top: 15px !important; }
-  .c-wrapper__heading { font-size: 16px !important; line-height: 26px !important; }
-  /* Components */
-  .c-button { font-size: 14px !important; line-height: 24px !important; }
-  .c-wrapper__table { padding-left: 0 !important; padding-right: 0 !important; }
   /* Utilities */
-  .u-global { font-size: 14px !important; line-height: 24px !important; }
+  
   .u-w100--xs { width: 100% !important; }
   .u-table-resp { box-sizing: border-box; width: 100%!important; padding-top: 0!important; padding-bottom: 16px!important; padding-left: 0!important; padding-right: 0 !important; }
   .u-table-resp__col { padding-right: 0 !important; padding-left: 0 !important; }

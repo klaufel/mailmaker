@@ -1,6 +1,6 @@
 //- partials/_layout.pug
 doctype transitional
-html(xmlns="http://www.w3.org/1999/xhtml" lang="es")
+html(xmlns="http://www.w3.org/1999/xhtml" lang="en")
 
   block vars
  
@@ -8,7 +8,6 @@ html(xmlns="http://www.w3.org/1999/xhtml" lang="es")
   - var config_date = 2018
   - var config_name = "{name}"
   - var config_url = "{url}"
-  
 
   head
 
@@ -26,27 +25,30 @@ html(xmlns="http://www.w3.org/1999/xhtml" lang="es")
     
     table(class="c-header" cellpadding="0" cellspacing="0" border="0" width="100%")
       tr
-        td(class="c-header__container" align="center")
+        td(class="c-header__container o-container" align="center")
           table(class="u-w100--xs" cellpadding="0" cellspacing="0" border="0" width="580")
             tr
               td
                 table(cellpadding="0" cellspacing="0" border="0" align="center" width="100%")
                   tr
-                    td(class="c-header__col" align="left")
-                      a(class="c-header__logo" href=""+config_url+"" target="_blank")
-                        img(class="c-header__image" src=""+config_path+"assets/images/logo.png" width="270" height="77" alt=""+config_name+"")
-                    // /.c-header__col 
-
-                    td(class="c-header__title" align="right")
-                      span #{config_title}
+                    td(class="c-header__logo" align="center")
+                      a(class="c-header__logo__link u-global" href=""+config_url+"" target="_blank")
+                        img(class="c-header__logo__image" src="assets/images/header-logo.png" width="120" height="50" alt="MailMaker")
+                    // /.c-header__logo 
+                  tr
+                    td(class="c-header__title" align="center")
+                      span Mail Maker
                     // /.c-header__title
-
-        // /.c-header__container 
-    // /.c-header 
+                  tr
+                    td(class="c-header__subtitle" align="center")
+                      span A toolset for create your awesome emails.
+                    // /.c-header__subtitle
+        // /.c-header__container
+    // /.c-header
 
 
     table(class="o-main" cellpadding="0" cellspacing="0" border="0" width="100%")
-      tr        
+      tr
         td(class="o-container__main" align="center" width="100%" class="u-w100--xs")
                 
           table(cellpadding="0" cellspacing="0" border="0" width="580" class="c-wrapper u-w100--xs")
@@ -71,8 +73,8 @@ html(xmlns="http://www.w3.org/1999/xhtml" lang="es")
 
                 table(cellpadding="0" cellspacing="0" border="0" width="100%")
                   tr
-                    td(class="c-footer__legal-title" align="center")
-                      span © #{config_date} #{config_title}. All right reserved.
+                    td(class="c-footer__legal-title u-global" align="center")
+                      span Made with ♥ from MailMaker
               // /.c-footer__legal 
         // /.c-footer__container 
     // /.c-footer 

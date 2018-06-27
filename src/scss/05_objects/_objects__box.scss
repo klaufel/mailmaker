@@ -1,0 +1,68 @@
+/* ============================================================
+ * Objects: Box
+ * ============================================================
+ *
+ * Minions ipsum baboiii hana dul sae butt. Uuuhhh jeje
+ * tulaliloo daa pepete jiji poulet tikka masala ti aamoo!
+ *
+ */
+ 
+
+// ============================================================
+// Variables
+
+$o-box__background:               $s-color--gray-05 !default;
+$o-box__gutter:                   50px !default;
+$o-box__border-width:             6px !default;
+$o-box__border-color:             $s-color--dark !default;
+
+$o-box__bullet__gutter:           20px !default;
+$o-box__bullet__gutter--tiny:     $o-box__bullet__gutter - 8px;
+ 
+
+// ============================================================
+// Output CSS
+
+.o-box {
+  background: $o-box__background;
+  border: $o-box__border-width solid $o-box__border-color;
+}
+
+  .o-box__container {
+    padding-left: $o-box__gutter;
+    padding-right: $o-box__gutter;
+  }
+
+  .o-box__bullet {
+    padding: $o-box__bullet__gutter;
+  }
+
+    .o-box__bullet--top-left,
+    .o-box__bullet--bottom-left {
+      text-align: left;
+    }
+
+    .o-box__bullet--top-right,
+    .o-box__bullet--bottom-right {
+      text-align: right;
+    }
+
+  .o-box__bullet-icon {
+    display: inline;
+    margin: 0;
+  }
+
+
+  .o-box__heading {
+    text-align: center;   
+  }
+  
+  .o-box__description {
+    text-align: left;
+    padding-top: 35px;
+  }
+
+  .o-box__button {
+    text-align: center;
+    padding-top: 35px;    
+  }

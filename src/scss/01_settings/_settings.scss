@@ -1,0 +1,14 @@
+/* ============================================================
+ * Settings
+ * ============================================================
+ *
+ * Import all the scss files in the settings layer.
+ *
+ */
+
+
+@import "settings__config";
+@import "settings__variables";
+@import "settings__breakpoints";
+@import "settings__colors";
+@import "settings__fonts";
