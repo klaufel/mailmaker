@@ -27,13 +27,13 @@
   },
   "homepage": "https://github.com/klaufel/mailmaker#readme",
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^5.0.0",
-    "gulp-clean-css": "^3.9.4",
-    "gulp-inline-css": "^3.3.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-inline-css": "^3.5.0",
     "gulp-notify": "^3.2.0",
     "gulp-pug2": "0.0.2",
-    "gulp-sass": "4.0.1",
-    "gulp-zip": "^4.1.0"
+    "gulp-sass": "4.0.2",
+    "gulp-zip": "^5.0.1"
   }
 }
